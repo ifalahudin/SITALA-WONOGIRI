@@ -36,7 +36,7 @@ const MapWilayah = (props) => {
 
 	const [geoJsonData, setGeoJsonData] = useState(null);
 
-	const url = "http://localhost:3001/api/locations/wilayah/all/datas";
+	const url = "http://103.181.183.137:9000/api/locations/wilayah/all/datas";
 
 	const fetchGeoJSONData = async () => {
 		try {
@@ -77,91 +77,91 @@ const MapWilayah = (props) => {
 	let HutanProduksiTerbatas = null;
 
 	if (geoJsonData) {
-		WilayahAdministrasi = geoJsonData.filter((list) => list.properties.KECAMATAN === "Pracimantoro");
+		WilayahAdministrasi = geoJsonData.features.filter((list) => list.properties.KECAMATAN === "Pracimantoro");
 		// console.log(WilayahAdministrasi);
 	}
 	if (geoJsonData) {
-		KawasanKarst = geoJsonData.filter((list) => list.properties.JENIS === "Kawasan Bentang Alam Karst (KBAK)");
+		KawasanKarst = geoJsonData.features.filter((list) => list.properties.JENIS === "Kawasan Bentang Alam Karst (KBAK)");
 		// console.log(KawasanKarst);
 	}
 	if (geoJsonData) {
-		GeoQB = geoJsonData.filter((list) => list.properties.SIMBOL === "Qb");
+		GeoQB = geoJsonData.features.filter((list) => list.properties.SIMBOL === "Qb");
 		// console.log(GeoQB);
 	}
 	if (geoJsonData) {
-		GeoTms = geoJsonData.filter((list) => list.properties.SIMBOL === "Tms");
+		GeoTms = geoJsonData.features.filter((list) => list.properties.SIMBOL === "Tms");
 		// console.log(GeoTms);
 	}
 	if (geoJsonData) {
-		GeoTmwl = geoJsonData.filter((list) => list.properties.SIMBOL === "Tmwl");
+		GeoTmwl = geoJsonData.features.filter((list) => list.properties.SIMBOL === "Tmwl");
 		// console.log(GeoTmwl);
 	}
 	if (geoJsonData) {
-		DataranAluvial = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Dataran Aluvial");
+		DataranAluvial = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Dataran Aluvial");
 		// console.log(DataranAluvial);
 	}
 	if (geoJsonData) {
-		LembahKarst = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Lembah Perbukitan Solusional Karst");
+		LembahKarst = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Lembah Perbukitan Solusional Karst");
 		// console.log(LembahKarst);
 	}
 	if (geoJsonData) {
-		LembahSungai = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Lembah Sungai");
+		LembahSungai = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Lembah Sungai");
 		// console.log(LembahSungai);
 	}
 	if (geoJsonData) {
-		PegununganKarst = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Pegunungan Solusional Karst");
+		PegununganKarst = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Pegunungan Solusional Karst");
 		// console.log(PegununganKarst);
 	}
 	if (geoJsonData) {
-		PerbukitanKarst = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Perbukitan Solusional Karst");
+		PerbukitanKarst = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Perbukitan Solusional Karst");
 		// console.log(PerbukitanKarst);
 	}
 	if (geoJsonData) {
-		Logva = geoJsonData.filter((list) => list.properties.MORFOLOGI === "Telaga Karst (Logva)");
+		Logva = geoJsonData.features.filter((list) => list.properties.MORFOLOGI === "Telaga Karst (Logva)");
 		// console.log(Logva);
 	}
 	if (geoJsonData) {
-		BadanTubuhAir = geoJsonData.filter((list) => list.properties.SOILTAX === "Badan Air / Tubuh Air");
+		BadanTubuhAir = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Badan Air / Tubuh Air");
 		// console.log(BadanTubuhAir);
 	}
 	if (geoJsonData) {
-		GleisolDistrik = geoJsonData.filter((list) => list.properties.SOILTAX === "Epiaquepts, Eutrudepts");
+		GleisolDistrik = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Epiaquepts, Eutrudepts");
 		// console.log(GleisolDistrik);
 	}
 	if (geoJsonData) {
-		GleisolKalkarik = geoJsonData.filter((list) => list.properties.SOILTAX === "Epiaquepts, Dystrudepts");
+		GleisolKalkarik = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Epiaquepts, Dystrudepts");
 		// console.log(GleisolKalkarik);
 	}
 	if (geoJsonData) {
-		KambisolEutrik = geoJsonData.filter((list) => list.properties.SOILTAX === "Eutrudepts, Hapludalfs");
+		KambisolEutrik = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Eutrudepts, Hapludalfs");
 		// console.log(KambisolEutrik);
 	}
 	if (geoJsonData) {
-		KambisolKromik = geoJsonData.filter((list) => list.properties.SOILTAX === "Dystrudepts, Epiaquepts");
+		KambisolKromik = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Dystrudepts, Epiaquepts");
 		// console.log(KambisolKromik);
 	}
 	if (geoJsonData) {
-		MeditereanVertik = geoJsonData.filter((list) => list.properties.SOILTAX === "Hapludalfs, Eutrodepts, Epiaquepts");
+		MeditereanVertik = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Hapludalfs, Eutrodepts, Epiaquepts");
 		// console.log(MeditereanVertik);
 	}
 	if (geoJsonData) {
-		MediteranLitosol = geoJsonData.filter((list) => list.properties.SOILTAX === "Hapludalfs, Eutrudepts, Udorthents");
+		MediteranLitosol = geoJsonData.features.filter((list) => list.properties.SOILTAX === "Hapludalfs, Eutrudepts, Udorthents");
 		// console.log(MediteranLitosol);
 	}
 	if (geoJsonData) {
-		AirTanah = geoJsonData.filter((list) => list.properties.JENIS === "Cekungan Air Tanah");
+		AirTanah = geoJsonData.features.filter((list) => list.properties.JENIS === "Cekungan Air Tanah");
 		// console.log(AirTanah);
 	}
 	if (geoJsonData) {
-		DaerahAliranSungai = geoJsonData.filter((list) => list.properties.JENIS === "Daerah Aliran Sungai");
+		DaerahAliranSungai = geoJsonData.features.filter((list) => list.properties.JENIS === "Daerah Aliran Sungai");
 		// console.log(DaerahAliranSungai);
 	}
 	if (geoJsonData) {
-		HutanLindung = geoJsonData.filter((list) => list.properties.FUNGSI_KAW === "Hutan Lindung");
+		HutanLindung = geoJsonData.features.filter((list) => list.properties.FUNGSI_KAW === "Hutan Lindung");
 		// console.log(HutanLindung);
 	}
 	if (geoJsonData) {
-		HutanProduksiTerbatas = geoJsonData.filter((list) => list.properties.FUNGSI_KAW === "Hutan Produksi Terbatas");
+		HutanProduksiTerbatas = geoJsonData.features.filter((list) => list.properties.FUNGSI_KAW === "Hutan Produksi Terbatas");
 		// console.log(HutanProduksiTerbatas);
 	}
 

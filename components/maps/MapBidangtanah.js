@@ -58,17 +58,17 @@ const MapBidangtanah = (props) => {
 
 	const [geoJsonData, setGeoJsonData] = useState(null);
 	const geoJsonLayerRef = useRef(null);
-	const url = "http://localhost:3001/api/locations/bidang_tanah/all/datas/";
+	const url = "http://103.181.183.137:9000/api/locations/bidang_tanah/all/datas/";
 	// const url = "http://localhost:3003/features";
 
 	const fetchGeoJSONData = async () => {
 		try {
-			setTimeout(async () => {
-				const response = await fetch(url);
-				const { datas } = await response.json();
-				setGeoJsonData(datas);
-				// console.log(datas);
-			}, 1000);
+			// setTimeout(async () => {
+			const response = await fetch(url);
+			const { datas } = await response.json();
+			setGeoJsonData(datas);
+			// console.log(datas);
+			// }, 1000);
 		} catch (error) {
 			console.error("Error fetching GeoJSON data:", error);
 		}
