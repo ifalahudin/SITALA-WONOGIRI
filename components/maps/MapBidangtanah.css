@@ -1,0 +1,30 @@
+.leaflet-container .leaflet-control-search {
+	@apply flex menu p-2 right-2 w-80 text-base-content bg-transparent border-none;
+}
+.leaflet-control-search .search-input {
+	@apply input input-bordered w-full max-w-xs;
+}
+.leaflet-control-search .search-button {
+	@apply btn btn-square btn-ghost hidden;
+}
+.leaflet-control-search .search-button:hover {
+	@apply btn btn-square btn-ghost text-lg;
+}
+.leaflet-control-search .search-cancel {
+	@apply flex;
+}
+.leaflet-control-search .search-tooltip {
+	@apply menu bg-base-200 w-80 rounded-btn overflow-y-auto;
+}
+.leaflet-control-search .search-tip {
+	@apply btn-ghost;
+}
+.leaflet-control-search .search-alert {
+	@apply alert alert-error;
+}
+.leaflet-control-search .search-load .search-input {
+	@apply loading loading-spinner loading-sm bg-none;
+}
+.leaflet-control-search .search-cancel {
+	@apply flex flex-1 w-8 h-8;
+}

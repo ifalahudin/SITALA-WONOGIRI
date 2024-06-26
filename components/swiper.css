@@ -1,0 +1,17 @@
+:root {
+	--mainFont: rgba(64, 64, 64, 0.75);
+	--mainColor: whitesmoke;
+	--swiper-navigation-size: 24px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	background-color: var(--mainFont);
+	padding: 2rem;
+	border-radius: 50rem;
+	color: var(--mainColor);
+	font-size: var(--swiper-navigation-size);
+}
+.swiper-pagination-bullet-active {
+	background-color: var(--mainColor);
+}
