@@ -36,6 +36,7 @@ const MapWilayah = (props) => {
 
 	const [geoJsonData, setGeoJsonData] = useState(null);
 
+	// const url = "http://localhost:3001/api/locations/wilayah/all/datas";
 	const url = "http://103.181.183.137:9000/api/locations/wilayah/all/datas";
 
 	const fetchGeoJSONData = async () => {

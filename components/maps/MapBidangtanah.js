@@ -59,6 +59,7 @@ const MapBidangtanah = (props) => {
 	const [geoJsonData, setGeoJsonData] = useState(null);
 	const geoJsonLayerRef = useRef(null);
 	const url = "http://103.181.183.137:9000/api/locations/bidang_tanah/all/datas/";
+	// const url = "http://localhost:3001/api/locations/bidang_tanah/all/datas/";
 	// const url = "http://localhost:3003/features";
 
 	const fetchGeoJSONData = async () => {

@@ -43,7 +43,7 @@ export default function Home() {
 
 			{/* kenapa sitala */}
 			<div className="flex flex-wrap justify-center py-40">
-				<div className="text-center justify-items-center font-bold lg:me-40 lg:pt-60" id="why"	>
+				<div className="text-center justify-items-center font-bold lg:me-40 lg:pt-60" id="why">
 					<h1 className="text-5xl">Kenapa memilih</h1>
 					<h1 className="text-8xl">SITALA?</h1>
 				</div>

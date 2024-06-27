@@ -34,6 +34,7 @@ const MapPolaruang = (props) => {
 	const [geoJsonData, setGeoJsonData] = useState(null);
 
 	const url = "http://103.181.183.137:9000/api/locations/pola_ruang/all/datas";
+	// const url = "http://localhost:3001/api/locations/pola_ruang/all/datas";
 
 	const fetchGeoJSONData = async () => {
 		try {

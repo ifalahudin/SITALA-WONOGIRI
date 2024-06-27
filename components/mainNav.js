@@ -26,7 +26,7 @@ export default function MainNavbar() {
 		{
 			id: 4,
 			name: "Wilayah",
-			link: "/pages/#",
+			link: "/pages/wilayah",
 		},
 
 		// template
