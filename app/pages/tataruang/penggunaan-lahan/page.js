@@ -25,9 +25,6 @@ export default function Home() {
 				<div className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
 					{/* Sidebar content here */}
 					<SearchBox selectPosition={selectPosition} setSelectPosition={setSelectPosition} />
-					<ul className="lg:hidden">
-						<SidebarContent />
-					</ul>
 				</div>
 			</div>
 		</div>
