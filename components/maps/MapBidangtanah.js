@@ -6,11 +6,9 @@ import "leaflet-search/dist/leaflet-search.src";
 import "@/components/maps/MapBidangtanah.css";
 
 // import images
-import placeHolder from "@/public/placeholder.png";
 
 // import Data
-import Tubokarto from "@/app/data/tubokarto.json";
-import AsetPemerintah from "@/app/data/Bidang/Aset Pemerintah.json";
+
 // Ensure leaflet-search is properly imported
 import L from "leaflet";
 

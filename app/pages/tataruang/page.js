@@ -6,7 +6,7 @@ import SearchBox from "@/components/search";
 import "leaflet/dist/leaflet.css";
 import SidebarContent from "@/components/sidebarContent";
 
-const MapTataruang = dynamic(() => import("@/components/maps/MapTataruang"), {
+const MapPolaruang = dynamic(() => import("@/components/maps/MapPolaruang"), {
 	ssr: false,
 });
 
@@ -18,7 +18,7 @@ export default function Home() {
 			<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 			<div className="drawer-content">
 				{/* Page content here */}
-				<MapTataruang selectPosition={selectPosition} />
+				<MapPolaruang selectPosition={selectPosition} />
 			</div>
 			<div className="drawer-side z-[10000]">
 				<label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
