@@ -72,7 +72,7 @@ export default function SwiperCarousel() {
 				}}
 				navigation={true}
 				modules={[Autoplay, Pagination, Navigation]}
-				className="swiperCarousel container shadow-xl rounded-box mx-6 lg:mx-60"
+				className="swiperCarousel container shadow-xl rounded-box mx-6 sm:mx-10 lg:mx-60"
 			>
 				{carouselItems.map((item) => (
 					<SwiperSlide
@@ -96,7 +96,7 @@ export default function SwiperCarousel() {
 							}}
 							className="mb-10 text-white py-4"
 						>
-							<h1 className="title text-6xl font-bold">{item.nama}</h1>
+							<h1 className="title text-4xl lg:text-6xl font-bold">{item.nama}</h1>
 							<p className="subtitle text-lg">{item.deskripsi}</p>
 						</div>
 					</SwiperSlide>

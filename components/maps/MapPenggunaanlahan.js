@@ -34,7 +34,7 @@ const MapTataruang = (props, items) => {
 	const [geoJsonData, setGeoJsonData] = useState(null);
 
 	// const url = "http://localhost:3001/api/locations/data_tata_ruang/all/datas";
-	const url = "http://103.181.183.137:9000/api/locations/data_tata_ruang/all/datas";
+	const url = "https://sitala-api.jurnalpendidikan.online:9000/api/locations/data_tata_ruang/all/datas";
 
 	const fetchGeoJSONData = async () => {
 		try {

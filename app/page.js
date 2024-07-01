@@ -35,8 +35,8 @@ export default function Home() {
 			</div>
 
 			{/* seputar wonogiri */}
-			<div className="min-w-4xl max-h-6xl py-40">
-				<h1 className="text-center text-6xl mb-20 font-bold">SEPUTAR WONOGIRI</h1>
+			<div className="min-w-4xl max-h-6xl pt-10 lg:py-40">
+				<h1 className="text-center text-4xl lg:text-6xl mb-20 font-bold">SEPUTAR WONOGIRI</h1>
 				{/* swiper carousel */}
 				<SwiperCarousel />
 			</div>
@@ -44,8 +44,8 @@ export default function Home() {
 			{/* kenapa sitala */}
 			<div className="flex flex-wrap justify-center py-40">
 				<div className="text-center justify-items-center font-bold lg:me-40 lg:pt-60" id="why">
-					<h1 className="text-5xl">Kenapa memilih</h1>
-					<h1 className="text-8xl">SITALA?</h1>
+					<h1 className="text-4xl lg:text-5xl">Kenapa memilih</h1>
+					<h1 className="text-5xl lg:text-8xl">SITALA?</h1>
 				</div>
 				<div className="card bg-base-100 shadow-xl" style={{ maxWidth: "720px" }}>
 					<div className="card-body">
@@ -124,11 +124,11 @@ export default function Home() {
 				>
 					<div className="hero-overlay bg-opacity-60"></div>
 					<div className="hero-content">
-						<div className="mix-w-sreen">
-							<h1 className="text-center text-6xl font-bold mb-20 text-white">Fitur Utama SITALA</h1>
+						<div className="mix-w-sreen sm:py-10">
+							<h1 className="text-center text-5xl lg:text-6xl font-bold mb-20 text-white">Fitur Utama SITALA</h1>
 							<div className="flex flex-wrap justify-center">
 								{/* card 1 */}
-								<div className="card w-96 bg-base-100 shadow-xl lg:me-20">
+								<div className="card w-60 lg:w-96 bg-base-100 shadow-xl mb-10  md:me-10 lg:me-20">
 									<figure>
 										<img
 											src="https://static.vecteezy.com/system/resources/previews/001/977/224/original/gps-map-with-pin-illustration-free-vector.jpg"
@@ -142,7 +142,7 @@ export default function Home() {
 								</div>
 
 								{/* card 2 */}
-								<div className="card w-96 bg-base-100 shadow-xl">
+								<div className="card w-60 lg:w-96 bg-base-100 shadow-xl mb-10">
 									<figure>
 										<img src="https://datascience.aero/wp-content/uploads/2022/03/geospatial-geojson-176.jpg" alt="Shoes" />
 									</figure>
@@ -159,22 +159,22 @@ export default function Home() {
 
 			{/* builder app */}
 			<div className="py-40 text-center">
-				<h1 className="text-6xl font-bold">Dibangun menggunakan</h1>
-				<h1 className="text-6xl font-reguler mb-20">teknologi terbaru</h1>
-				<div className="flex flex-warp justify-center">
-					<div className=" w-50 h-50 rounded-lg shadow-xl p-10">
+				<h1 className="text-5xl lg:text-6xl font-bold">Dibangun menggunakan</h1>
+				<h1 className="text-5xl lg:text-6xl font-reguler mb-20">teknologi terbaru</h1>
+				<div className="flex justify-center">
+					<div className=" w-50 h-50 sm:w-fit rounded-lg shadow-xl p-10">
 						<figure className="align-center my-auto">
 							<Image src={nextLogo} alt="image" width={80} height={80}></Image>
 						</figure>
 						{/* <h2 className="text-md font-medium mt-2">NEXT.JS</h2> */}
 					</div>
-					<div className=" w-50 h-50 rounded-lg shadow-xl p-10 mx-10">
+					<div className=" w-50 h-50 sm:w-fit rounded-lg shadow-xl p-10 lg:mx-10">
 						<figure className="align-center my-auto">
 							<Image src={reactLeafletLogo} alt="image" width={100} height={100}></Image>
 						</figure>
 						{/* <h2 className="text-md font-medium mt-2">React Leaflet</h2> */}
 					</div>
-					<div className=" w-50 h-50 rounded-lg shadow-xl p-10">
+					<div className=" w-50 h-50 sm:w-fit rounded-lg shadow-xl p-10">
 						<figure className="align-center my-auto mx">
 							<Image src={expressLogo} alt="image" width={80} height={80}></Image>
 						</figure>
@@ -183,7 +183,7 @@ export default function Home() {
 			</div>
 
 			{/* gabung sitala */}
-			<div className="py-40 mx-20">
+			{/* <div className="py-40 mx-20">
 				<div className="bg-gradient-to-r from-cyan-500 to-blue-500 hero rounded-lg" style={{ minHeight: "50dvh" }}>
 					<div className="hero-content text-center text-white">
 						<div className="max-w-2xl">
@@ -193,10 +193,10 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			<ScrollTopBtn />
-
+			<div className="divider"></div>
 			{/* footer */}
 			<Footer />
 		</main>
