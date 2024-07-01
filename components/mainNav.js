@@ -28,6 +28,11 @@ export default function MainNavbar() {
 			name: "Wilayah",
 			link: "/pages/wilayah",
 		},
+		{
+			id: 5,
+			name: "Zona Nilai Tanah",
+			link: "/pages/zona-nilai-tanah",
+		},
 
 		// template
 		// {
@@ -48,7 +53,7 @@ export default function MainNavbar() {
 					<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 						{navLinks.map(({ id, link, name }) => (
 							<li key={id}>
-								<Link href={link} className={`${pathname === link ? "text-neutral text-lg" : ""}`}>
+								<Link href={link} className={`${pathname === link ? "text-neutral text-md" : ""}`}>
 									{name}
 								</Link>
 							</li>
@@ -61,11 +66,11 @@ export default function MainNavbar() {
 					<p className=" text-2xl font-bold">SITALA</p>
 				</Link>
 			</div>
-			<div className="navbar-center hidden lg:flex lg:px-">
-				<ul className="menu menu-horizontal px-1 text-lg font-medium">
+			<div className="navbar-center hidden lg:flex">
+				<ul className="menu menu-horizontal px-1 font-medium">
 					{navLinks.map(({ id, link, name }) => (
 						<li key={id}>
-							<Link href={link} className={`${pathname === link ? "text-neutral text-lg" : ""}`}>
+							<Link href={link} className={`${pathname === link ? "text-neutral text-md" : ""}`}>
 								{name}
 							</Link>
 						</li>
@@ -105,9 +110,6 @@ export default function MainNavbar() {
 						<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
 					</svg>
 				</label>
-				<button className="btn btn-ghost" disabled>
-					Sign In
-				</button>
 			</div>
 		</div>
 	);

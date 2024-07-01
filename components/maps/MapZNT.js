@@ -9,7 +9,6 @@ import "@/components/maps/MapBidangtanah.css";
 import L from "leaflet";
 
 // import images
-import placeHolder from "@/public/placeholder.png";
 
 // Import Data asets
 
@@ -37,7 +36,7 @@ const MapWilayah = (props) => {
 	const [geoJsonData, setGeoJsonData] = useState(null);
 
 	// const url = "http://localhost:3001/api/locations/wilayah/all/datas";
-	const url = "https://sitala-api.jurnalpendidikan.online:9000/api/locations/wilayah/all/datas";
+	const url = "http://103.181.183.137:9000/api/locations/wilayah/all/datas";
 
 	const fetchGeoJSONData = async () => {
 		try {

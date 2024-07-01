@@ -28,3 +28,7 @@
 .leaflet-control-search .search-cancel {
 	@apply flex flex-1 w-8 h-8;
 }
+
+.custom-menu {
+	grid-auto-flow: unset !important;
+}

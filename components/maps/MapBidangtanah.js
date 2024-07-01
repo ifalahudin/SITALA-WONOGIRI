@@ -8,8 +8,9 @@ import "@/components/maps/MapBidangtanah.css";
 // import images
 import placeHolder from "@/public/placeholder.png";
 
-// import components
-
+// import Data
+import Tubokarto from "@/app/data/tubokarto.json";
+import AsetPemerintah from "@/app/data/Bidang/Aset Pemerintah.json";
 // Ensure leaflet-search is properly imported
 import L from "leaflet";
 
@@ -58,7 +59,8 @@ const MapBidangtanah = (props) => {
 
 	const [geoJsonData, setGeoJsonData] = useState(null);
 	const geoJsonLayerRef = useRef(null);
-	const url = "http://103.181.183.137:9000/api/locations/bidang_tanah/all/datas/";
+
+	const url = "https://sitala-api.jurnalpendidikan.online:9000/api/locations/bidang_tanah/all/datas/";
 	// const url = "http://localhost:3001/api/locations/bidang_tanah/all/datas/";
 	// const url = "http://localhost:3003/features";
 
@@ -68,7 +70,7 @@ const MapBidangtanah = (props) => {
 			const response = await fetch(url);
 			const { datas } = await response.json();
 			setGeoJsonData(datas);
-			// console.log(datas);
+			console.log(datas);
 			// }, 1000);
 		} catch (error) {
 			console.error("Error fetching GeoJSON data:", error);
@@ -111,7 +113,7 @@ const MapBidangtanah = (props) => {
 				list.properties.PEMILIK === "PEMERINTAH DESA TUBOKARTO,KEC PRACIMANTORO" ||
 				list.properties.PEMILIK === "PEMERINTAH KABUPATEN WONOGIRI"
 		);
-		console.log(Pemerintah);
+		// console.log(Pemerintah);
 	}
 	if (geoJsonData) {
 		TanpaNama = geoJsonData.filter((list) => list.properties.PEMILIK == null);
@@ -146,7 +148,6 @@ const MapBidangtanah = (props) => {
 						<LayerGroup>{TanpaNama && <GeoJSON data={TanpaNama} style={{ weight: 2, color: "#5c5cff" }} ref={geoJsonLayerRef} onEachFeature={onEachData} />}</LayerGroup>
 					</LayersControl.Overlay>
 				</LayersControl>
-				<div className="flex">{geoJsonData && geoJsonLayerRef.current && <SearchControl geoJsonLayer={geoJsonLayerRef.current} />}</div>
 				{selectPosition && (
 					<Marker
 						position={locationSelection}
@@ -159,6 +160,7 @@ const MapBidangtanah = (props) => {
 					</Marker>
 				)}
 				<ResetCenterView selectPosition={selectPosition} />
+				<div className="flex">{geoJsonData && geoJsonLayerRef.current && <SearchControl geoJsonLayer={geoJsonLayerRef.current} />}</div>
 			</MapContainer>
 		</>
 	);
